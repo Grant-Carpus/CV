@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Using JavaScript to Control Sytles</title>
+	
+		<link href="change-color-css.css" type="text/css" rel="stylesheet" id="style" />
+	</head>
+	
+	<body>
+		<script>
+		function makeRed() 
+		{
+    	backgroundColor = 'red';
+		document.getElementById('display').style.background='red';
+		}
+		
+		function makeBlue() 
+		{
+		backgroundColor = 'blue';
+		document.getElementById('display').style.background='blue';
+		}
+		
+		function makeGreen() 
+		{
+		backgroundColor = 'green';
+		document.getElementById('display').style.background='green';
+		}
+		
+		function make75() 
+		{    
+		width = '75%';
+		document.getElementById('display').style.width='75%';
+		} 
+		
+		function make50() 
+		{    
+		width = '50%';
+		document.getElementById('display').style.width='50%';
+		}
+		
+		function make25() 
+		{   
+		width = '25%';
+		document.getElementById('display').style.width='25%';
+		}		 
+		
+		function summaryAlert() 
+		{
+		alert ('BackGround-color: ' + backgroundColor + '\nwidth: ' + width);
+		}
+		
+		function init() 
+		{
+		document.getElementById('red').onclick = makeRed;
+		document.getElementById('blue').onclick = makeBlue;
+		document.getElementById('green').onclick = makeGreen;
+		
+		document.getElementById('75pc').onclick = make75;
+		document.getElementById('50pc').onclick = make50;
+		document.getElementById('25pc').onclick = make25;
+		
+		document.getElementById('btnSummary').onclick = summaryAlert;
+		}
+		window.onload = init;
+		</script>
+	
+
+
+
+		<h1>Control style with JavaScript</h1>
+		
+		<h2>What colour would you like the background colour to be:</h2>
+		
+		<ul>
+			<li id="red">Red</li>
+			<li id="blue">Blue</li>
+			<li id="green">Green</li>
+		</ul>
+		
+		<h2>What size would you like the width to be:</h2>
+		
+		<ul>
+			<li id="25pc">25%</li>
+			<li id="50pc">50%</li>
+			<li id="75pc">75%</li>
+		</ul>
+		
+		<hr />
+		
+		<p id="display">This is a paragraph of sample text.</p>
+		
+		<button type="button" id="btnSummary">Summary Report</button>
+
+
+	</body>
+</html>

@@ -1,0 +1,15 @@
+	body{
+				font-family: arial; 	/*Here I have changed the font style and the background colour within the body*/
+				background-color: black;
+				}
+			h1
+				{
+				color: red;		/*Here in the heading one I have changed the colour of the text and centred the content*/
+				text-align: center;
+				}
+			p
+				{
+				color: red;		/*Here within the paragraph I have changed the size of the text, the colour and the alignment*/
+				text-align: center;
+				font-size: 22px;
+				}

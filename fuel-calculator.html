@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+     <title>The cost of your journey</title>
+	 <style type="text/css">
+	 /*
+	 Here I am setting up the CSS for the fuel calculator system that I have done
+	 */
+		body {
+			font-family: arial, sans-serif;
+		}
+		fieldset {
+			font-weight: 	bold;
+			width: 			300px;
+		}
+		label {
+			font-weight: 	normal;
+			display: 		inline-block;
+			width: 			100px;
+		}
+		input[type="text"], select {
+			margin-bottom: 	5px;
+		}
+		.button {
+			text-align:		center;
+		}
+	</style>
+</head>
+
+<body>
+    <!--Below is the code that has been implemented to use the script that I have coded-->
+    
+        <fieldset>
+            <legend>How much is it to get there?</legend> 
+			<!--The legend element is displayed for the calculation block-->
+            <div>
+				<label for="miles">Miles</label>
+				<input type="text" name="miles" id="miles" placeholder="Enter Miles here" />
+			</div>
+			
+            <div>
+				<label for="fuel">Fuel</label>
+				<select name="fuel" id="fuel">
+					<option value="petrol">Petrol</option>
+					<option value="diesel">Diesel</option>
+				</select>
+			</div>
+			<!--separate area for the button, within its own div field-->	
+            <div class="button">
+				<button type="button" id="calc">Calculate The Cost &rarr;</button>
+			</div>
+        </fieldset>
+    <!--JavaScript source code link for the script-->
+    <script src="fuel-calculator-script.js"></script>
+</body>
+</html>

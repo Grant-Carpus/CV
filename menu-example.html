@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Drop-down Menu With the JavaScript Fists of Fury</title>
+		<link rel="stylesheet" href="design.css" type="text/css" />
+		<script src="drop.js"></script>
+	</head>
+	
+	<body>
+		<h3>Drop-down Menu</h3>
+		<h4>Re-directing you to glory</h4>
+		<h5>Through the wonders of JavaScript</h5>
+		<br /><br />
+		<!-- First menu choice -->
+		<!-- comment goes here - explain what is happening here... --> 
+		<dl class="dropdown">
+		<dt id="one-ddheader" onmouseover="ddMenu('one',1)" onmouseout="ddMenu('one',-1)">News Headlines</dt>
+		<dd id="one-ddcontent" onmouseover="cancelHide('one')" onmouseout="ddMenu('one',-1)">
+			<ul>
+				<li><a href="http://www.bbc.co.uk/news" class="separator">BBC News</a></li>
+				<li><a href="https://www.rt.com/" class="separator">Russia Today</a></li>
+				<li><a href="http://news.sky.com/" class="separator">Sky News</a></li>
+			</ul>
+		</dd>
+		</dl>
+		<!-- End of First Menu Choice -->
+		
+		<!-- Second menu choice -->
+		<!-- comment goes here - explain what is happening here... -->
+		<dl class="dropdown">
+		<dt id="two-ddheader" onmouseover="ddMenu('two',1)" onmouseout="ddMenu('two',-1)">Technology</dt>
+		<dd id="two-ddcontent" onmouseover="cancelHide('two')" onmouseout="ddMenu('two',-1)">
+			<ul>
+				<li><a href="http://www.bbc.co.uk/news/technology" class="separator">BBC technology</a></li>
+				<li><a href="http://www.wired.co.uk/technology" class="separator">Wired technology</a></li>
+				<li><a href="http://www.androidauthority.com/" class="separator">Android Authority</a></li>
+				
+			</ul>
+		</dd>
+		</dl>
+		<!-- End of Second Menu Choice -->
+		
+		<!-- Third menu choice -->
+		<!-- comment goes here - explain what is happening here... -->
+		<dl class="dropdown">
+		<dt id="three-ddheader" onmouseover="ddMenu('three',1)" onmouseout="ddMenu('three',-1)">Entertainment</dt>
+		<dd id="three-ddcontent" onmouseover="cancelHide('three')" onmouseout="ddMenu('three',-1)">
+			<ul>
+				<li><a href="http://www.empireonline.com" class="separator">Empire</a></li>
+				<li><a href="http://www.imdb.com/" class="separator">Imdb</a></li>
+				<li><a href="http://www.film4.com/special-features/top-lists/100-must-see-films-21st-century" class="separator">100 Must see films from film4, apparently</a></li>
+				
+			</ul>
+		</dd>
+		</dl>
+		<!-- End of third Menu Choice -->
+		
+		
+		<!-- Fourth menu choice -->
+		<!-- comment goes here - explain what is happening here... -->
+		<dl class="dropdown">
+		<dt id="four-ddheader" onmouseover="ddMenu('four',1)" onmouseout="ddMenu('four',-1)">Additional Stuff</dt>
+		<dd id="four-ddcontent" onmouseover="cancelHide('four')" onmouseout="ddMenu('four',-1)">
+			<ul>
+				<li><a href="https://moodle.truro-penwith.ac.uk/moodle/login/index.php" class="separator">Moodle!</a></li>
+				<li><a href="http://www.giantbomb.com/" class="separator">GiantBomb</a></li>
+				<li><a href="https://www.youtube.com/" class="separator">Youtube</a></li>
+				
+			</ul>
+		</dd>
+		</dl>
+		<!--End of Fourth menu choice-->
+		
+		
+		
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- Set the page default language to British English -->
+<html lang="en-gb">
+<head>
+     <title>Login</title>
+</head>
+
+<body>
+    <!-- Registration Form -->
+	<!-- novalidate removes the default HTML5 form validation -->
+    <form action="login.php" method="post" id="loginForm" novalidate>
+        <fieldset> <!--Setting the login field within the field set-->
+            <legend>Login</legend><!--Giving the legend title as Login as you can see on the page (title for box)-->
+			
+			<!--Below are the seperate fields for the log in screen-->
+            <div><label for="fname">First Name</label>
+			<input type="text" name="fname" id="fname" required="required"/></div>
+            
+			<div><label for="sname">Surname</label>
+			<input type="text" name="sname" id="sname" required="required"/></div>
+			
+			<div><label for="Company">Company</label>
+			<input type="text" name="comp" id="comp" required="required"/></div>
+			
+			<div><label for="compCo">Company Code</label>
+			<input type="text" name="compCo" id="compCo" required="required"/></div>
+			
+			<div><label for="pass"> Password</label> 
+			<input type ="text" name="pass" id="pass" required="required"/></div>
+			
+			<!--Creating the two buttons-->
+            <div><input type="submit" value="Login &rarr;" id="submit"/></div>
+			<div><input type="reset" value="Reset &rarr;" id="reset"/></div>
+        </fieldset>
+    </form>
+    <script src="form-validation.js"></script><!--Source for the JavaScript-->
+</body>
+</html>
+<!--end-->
