@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Log-in Script Version 1</title>
+		<link type="text/css" href="pet-style.css" rel="stylesheet" />
+	</head>
+	
+	<body>
+		<?php
+			##########
+			#Connecting to the database with a log in system and user rights
+			#There ae two rights to this 1 which has regular rights and 2 that has admin full rights
+			#they are there so they Add or delete pets from the database
+			##########
+			$conn= mysqli_connect('localhost', 'marw_gcarpenter', 'carpenterg', 'marw_gcarpenter')
+			or die ("Sorry -  could not connect to MySQL");
+			
+			//Here we created the varibles for the username and the password
+			$theUsername = $_POST['username'];
+			$thePassword = $_POST['password'];
+			
+			//Here we are creating the code so that once the user inputs their password it will take away some symbols such as the ' '
+			//When creating the form then make sure you tell people not to use certain characters
+			$theUsername = mysqli_real_escape_string($conn, $theUsername);
+			$thePassword = mysqli_real_escape_string($conn, $thePassword);
+			
+			//Creating the levels for differnet log in users
+			$level1 = mysqli_num_rows(mysqli_query ($conn, "SELECT * FROM admin
+															WHERE username='$theUsername'
+															AND password='$thePassword'
+															AND access_level=1"));
+															
+			$level2 = mysqli_num_rows(mysqli_query ($conn, "SELECT * FROM admin
+															WHERE username='$theUsername'
+															AND password='$thePassword'
+															AND access_level=2"));												
+			
+			
+			
+			
+		// $_SESSION[‘user’] is used to store the username of the logged in user.
+		//$_SESSION[‘level’] is used to store the access level of the logged in user.
+		//$_SESSION is an array that is stored on the web server only.
+		if ($level1 > 0)
+			{	//Below I have added in so that once logged in you may be able to see where directed onced logged in
+				session_start();
+				$_SESSION['user'] = $theUsername;
+				$_SESSION['level'] = 1;
+				header("location: level-1-homepage.php");
+			}//end if
+		else if ($level2 > 0)
+			{
+				session_start();
+				$_SESSION['user'] = $theUsername;
+				$_SESSION['level'] = 2;
+				header("Location: level-2-homepage.php");
+				
+			}//end else if
+		else
+			{
+				echo "Log-in Faild, try again or contact the network administrator
+				<a href = 'login.html'> try again</a>";
+			}//end else
+		?>
+	</body>
+</html>
